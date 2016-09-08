@@ -125,3 +125,7 @@ ENV/
 # Debug files
 *.dSYM/
 *.su
+
+
+# Emacs 
+*.*~
