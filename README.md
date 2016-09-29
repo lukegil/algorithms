@@ -44,4 +44,5 @@ To time via Python :
 ```
 
 **Output**
+
 The script creates a (plotly)[https://plot.ly/python/] html file. 
