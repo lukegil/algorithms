@@ -2,11 +2,12 @@
 
 Test the speed of various algorithms written in Python and C
 
-*To run*
+**To run**
+
 python main.py -t TYPE [-a ALGORITHM] [-l ARRAYLENGTH] [-s STEP] [-n NUMTIMES] [-f FILEDESTINATION] [-p] [-c]
 
-*Arguments*
-
+**Arguments**
+```
   -h, --help            show this help message and exit
   -t TYPE, --type TYPE  the type of algorithm - sorting, searching, etc
   -a ALGORITHM, --algorithm ALGORITHM
@@ -20,6 +21,7 @@ python main.py -t TYPE [-a ALGORITHM] [-l ARRAYLENGTH] [-s STEP] [-n NUMTIMES] [
                         # of trials to run for each step
   -p, --python          Run on python scripts
   -c, --clang           Run on c scripts
+```
 
 *add a new algorithm*
 Create a new C or Python file. The algorithm should live as a separate function, called from a function `wrapper`.
