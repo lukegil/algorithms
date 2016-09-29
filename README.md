@@ -43,3 +43,5 @@ To time via Python :
     end = time.clock()
 ```
 
+**Output**
+The script creates a (plotly)[https://plot.ly/python/] html file. 
