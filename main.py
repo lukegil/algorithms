@@ -45,6 +45,7 @@ if __name__ == "__main__":
                         default=False,
                         required=False,
                         help="Run on c scripts")
+
     args = parser.parse_args()
 
     langs = []

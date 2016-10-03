@@ -1,5 +1,5 @@
 import sys, os, math
-import imp, array, subprocess, collections
+import imp, array, subprocess, collections, py_compile
 from trial import Trial
 from ctypes import *
 
@@ -48,6 +48,13 @@ def get_c_lib(path, filename):
     lib = cdll.LoadLibrary("{}".format(out_fn))
     return lib
 
+def get_py_lib(path, filename):
+    '''gets py modules'''
+    mod_name = filename.split(".")
+    m = imp.find_module(mod_name[0], [path])
+    lib = imp.load_module(mod_name[0], m[0], m[1], m[2])
+    return lib
+
 
 def get_functions(parent_dir, child_dir, langs):
     ''' Returns multidimensional list [[module_name, function_object],...]
@@ -75,8 +82,8 @@ def get_functions(parent_dir, child_dir, langs):
             elif (mod_name[1] == "c"):
                 lib = get_c_lib(directory, fn)
             else:
-                m = imp.find_module(mod_name[0], [directory])
-                lib = imp.load_module(mod_name[0], m[0], m[1], m[2])
+                lib = get_py_lib(directory, fn)
+
 
             functions.append([mod_name[0], mod_name[1], lib.wrapper])
 
