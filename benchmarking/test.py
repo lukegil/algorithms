@@ -84,7 +84,6 @@ def get_functions(parent_dir, child_dir, langs):
             else:
                 lib = get_py_lib(directory, fn)
 
-
             functions.append([mod_name[0], mod_name[1], lib.wrapper])
 
     return functions
