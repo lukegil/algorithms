@@ -51,6 +51,8 @@ if __name__ == "__main__":
     langs = []
     if args.python: langs.append("py")
     if args.clang: langs.append("c")
+    if (len(langs) == 0):
+        raise ValueError("Please specify, -p, -c or both")
 
     results = test.manage_tests(args.type, args.algorithm, args.arraylength, args.step, args.numtimes, langs)
     destination = test.plot_results(results, args.filedestination)
