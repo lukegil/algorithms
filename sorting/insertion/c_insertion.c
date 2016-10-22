@@ -4,9 +4,7 @@
 float wrapper(long A[], size_t a_length);
 void insertion_sort(long A[], size_t a_length);
 
-int main() {
-
-}
+int main() {}
 
 float wrapper(long A[], size_t a_length) {
     clock_t start = clock();
