@@ -113,7 +113,6 @@ def manage_tests(algo_class, algo, upper_len, increment, num_trials, langs):
 
 
     functions = get_functions(algo_class, algo, langs)
-
     results = {}
 
     for name, lang, func in functions:
